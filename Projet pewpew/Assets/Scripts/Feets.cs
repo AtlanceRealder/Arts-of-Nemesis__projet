@@ -10,11 +10,11 @@ public class Feets : MonoBehaviour {
 		player = transform.parent.GetComponent<PlayerController> ();
 	}
 
-	void OnTriggerEnter (Collider coll) {
+	void OnTriggerEnter (Collider coll) { // Notifie PlayerController que le joueur est en contact avec le sol.
 		player.isTouchingTheGround = true;
 	}
 
-	void OnTriggerExit (Collider coll) {
+	void OnTriggerExit (Collider coll) { // Notifie PlayerController que le joueur n'est pas en contact avec le sol.
 		player.isTouchingTheGround = false;
 	}
 }
